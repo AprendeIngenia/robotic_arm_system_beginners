@@ -1,0 +1,18 @@
+{
+	"extension": {
+		"version": "0.6.1",
+		"json": 2
+	},
+	"project": {
+		"name": "vex_brain",
+		"description": "",
+		"creationDate": "01/03/2025, 23:22:58",
+		"platform": "IQ2",
+		"language": "python",
+		"slot": 1,
+		"sdkVersion": "IQ2_1_0_0_20",
+		"python": {
+			"main": "src/main.py"
+		}
+	}
+}
