@@ -1,7 +1,5 @@
 import time
 import logging as log
-
-# Importa tu CommunicationManager
 from communication.serial_manager import CommunicationManager
 
 log.basicConfig(level=log.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -100,7 +98,7 @@ class Robot:
     def _get_placement_zones(self, object_class: str):
         return self.placement_zones.get(object_class.lower(), 
                                         self.placement_zones['default'])          
-          
+        
     def process_scan_results(self):
         """process scan data"""
         if not self.scan_results:

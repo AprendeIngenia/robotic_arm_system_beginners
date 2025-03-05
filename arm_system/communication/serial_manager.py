@@ -16,7 +16,7 @@ log.basicConfig(level=log.INFO, format="%(asctime)s - %(levelname)s - %(message)
 class CommunicationManager:
     def __init__(self, port: str='/dev/ttyACM1', baudrate: int = 115200, camera_index: int = 0):
         """
-        :param port: srial port
+        :param port: serial port
         :param baudrate: baudrate
         :param camera_index: camera index
         """
@@ -87,7 +87,7 @@ class CommunicationManager:
     def send_message(self, message_type: str, data: dict) -> bool:
         """
         send json message to robot
-        :param message_type: 'command', 'status', etc.
+        :param message_type: 'check_service', 'safety_service', etc.
         :param data: message data
         """
         if not self.is_connected or not self.serial_port:
@@ -152,8 +152,8 @@ class CommunicationManager:
                 if state == 'detected':
                     Thread(target=self._handle_object_detection, args=(data,)).start()
                     log.info(f"Scan Data - Object Detected: "
-                             f"Angle:    {data['angle']}° "
-                             f"Distance: {data['distance']}mm")
+                            f"Angle:    {data['angle']}° "
+                            f"Distance: {data['distance']}mm")
 
                 elif state == 'complete':
                     self.scan_complete_event.set()

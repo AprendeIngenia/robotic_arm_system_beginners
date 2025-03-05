@@ -40,7 +40,6 @@ class ImageProcessor:
                 confidence = boxes.conf.cpu().numpy()[0]
                 class_id = int(boxes.cls[0])
                 box_data = boxes.xyxy.cpu().numpy()[0]
-
                     
                 if confidence < confidence_threshold:
                     continue
