@@ -9,7 +9,7 @@ from threading import Thread, Event
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from perception.vision.camera.main import CameraManager
-from arm_system.perception.vision.image_processing import ImageProcessor
+from perception.vision.image_processing import ImageProcessor
 
 log.basicConfig(level=log.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
