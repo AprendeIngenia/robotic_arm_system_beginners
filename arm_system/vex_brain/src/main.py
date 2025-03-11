@@ -440,7 +440,7 @@ class RoboticServices:
                 if data['detected']:
                     self.control.shoulder_motor.set_stopping(BRAKE)
                     self.control.elbow_motor.set_stopping(BRAKE)
-                    wait(500, MSEC)
+                    #wait(500, MSEC)
                     return True
             
                 if object_distance > 160:
@@ -454,7 +454,7 @@ class RoboticServices:
                 if time.time() - start_time >= 3:
                     self.control.shoulder_motor.set_stopping(BRAKE)
                     self.control.elbow_motor.set_stopping(BRAKE)
-                    wait(500, MSEC)
+                    #wait(500, MSEC)
                     return True
                 
                 shoulder_speed = 20
@@ -462,7 +462,7 @@ class RoboticServices:
                 
             self.control.shoulder_motor.spin(REVERSE, shoulder_speed, RPM)
             self.control.elbow_motor.spin(FORWARD, elbow_speed, RPM)
-            wait(100, MSEC)
+            #wait(100, MSEC)
         return False
         
     def process_message(self, msg):
