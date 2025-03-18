@@ -3,7 +3,7 @@ import serial
 
 class SerialCommunication:
     def __init__(self):
-        self.com = serial.Serial("COM7", 115200, write_timeout=10)
+        self.com = serial.Serial("COM7", 115200, write_timeout=10) # raspberry: "/dev/ttyACM0"
 
     def writing_data(self, command: str) -> None:
         self.com.write(command.encode('ascii'))
