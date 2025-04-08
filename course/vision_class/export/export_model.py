@@ -1,5 +1,5 @@
 from ultralytics import YOLO
 
-model = YOLO('model/yolo11s.pt')
+model = YOLO('models/torch/yolo11s.pt')
 
-model.export(format="ncnn")
+model.export(format="mnn")
